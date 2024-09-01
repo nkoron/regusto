@@ -5,7 +5,7 @@ import { hasEnvVars} from "./check-env-vars";
 export const createClient = () => {
   const cookieStore = cookies();
   if(! hasEnvVars){
-    throw new  Error
+    throw new  Error("Missing env variables NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY");
   }
   return createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
