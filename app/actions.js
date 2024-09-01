@@ -1,6 +1,6 @@
 // pages/api/actions.js
-import { createClient } from "../lib/server";
-import { encodedRedirect } from "../lib/Utils";
+import { createClient } from "../utils/server";
+import { encodedRedirect } from "../utils/Utils";
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {

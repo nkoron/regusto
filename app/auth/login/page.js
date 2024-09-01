@@ -1,17 +1,15 @@
-import React, {useState} from "react";
+"use client";
 import Link from "next/link";
+import React, { useState } from "react";
 
 // layout for page
 
-import Auth from "layouts/Auth.js";
-import {loginAction} from "../../api/actions";
 
 
-
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // State to hold any errors
+export default function Page() {
+  const [email, setEmail] = useState(''); // State to hold the email input value
+  const [password, setPassword] = useState(''); // State to hold the email input value
+  const [error, setError] = useState(''); // State to hold the email input value
 
 
   const handleChangeEmail = (event) => {
@@ -165,5 +163,3 @@ export default function Login() {
       </>
   );
 }
-
-Login.layout = Auth;

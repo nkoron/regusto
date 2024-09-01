@@ -91,7 +91,7 @@ const PagesDropdown = () => {
         >
           Auth Layout
         </span>
-        <Link legacyBehavior={true} href="/auth/login">
+        <Link legacyBehavior={true} href="/auth/login/page">
           <a
             href="#pablo"
             className={
@@ -119,7 +119,7 @@ const PagesDropdown = () => {
         >
           No Layout
         </span>
-        <Link legacyBehavior={true} href="/landing">
+        <Link legacyBehavior={true} href="/app/page">
           <a
             href="#pablo"
             className={

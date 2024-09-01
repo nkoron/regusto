@@ -6,7 +6,7 @@ import Link from "next/link";
 import Navbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
-export default function Landing() {
+export default function Page() {
   return (
     <>
       <Navbar transparent />
@@ -129,7 +129,7 @@ export default function Landing() {
                   good to go. Just make sure you enable them first via
                   JavaScript.
                 </p>
-                <Link legacyBehavior={true} href="/">
+                <Link legacyBehavior={true} href="/public">
                   <a
                    href="#pablo" className="font-bold text-blueGray-700 mt-8">
                     Check Notus NextJS!

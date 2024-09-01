@@ -94,7 +94,7 @@ const IndexDropdown = () => {
         >
           Auth Layout
         </span>
-        <Link legacyBehavior={true} href="/auth/login">
+        <Link legacyBehavior={true} href="/auth/login/page">
           <a
             href="#pablo"
             className={
@@ -122,7 +122,7 @@ const IndexDropdown = () => {
         >
           No Layout
         </span>
-        <Link legacyBehavior={true} href="/landing">
+        <Link legacyBehavior={true} href="/page">
           <a
             href="#pablo"
             className={

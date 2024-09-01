@@ -38,15 +38,15 @@ to quickly set up the basic structure for your web project.
 Here are all the page from the project:
 - [Presentation](https://demos.creative-tim.com/notus-nextjs/?ref=nnjs-github-readme)
 - Admin Samples
-  - [Dashboard](https://demos.creative-tim.com/notus-nextjs/admin/dashboard?ref=nnjs-github-readme)
+  - [Page](https://demos.creative-tim.com/notus-nextjs/admin/dashboard?ref=nnjs-github-readme)
   - [Settings](https://demos.creative-tim.com/notus-nextjs/admin/settings?ref=nnjs-github-readme)
   - [Tables](https://demos.creative-tim.com/notus-nextjs/admin/tables?ref=nnjs-github-readme)
   - [Maps](https://demos.creative-tim.com/notus-nextjs/admin/maps?ref=nnjs-github-readme)
 - Authentication Samples
-  - [Login](https://demos.creative-tim.com/notus-nextjs/auth/login?ref=nnjs-github-readme)
+  - [Page](https://demos.creative-tim.com/notus-nextjs/auth/login?ref=nnjs-github-readme)
   - [Register](https://demos.creative-tim.com/notus-nextjs/auth/register?ref=nnjs-github-readme)
 - Presentation Samples
-  - [Landing](https://demos.creative-tim.com/notus-nextjs/landing?ref=nnjs-github-readme)
+  - [Page](https://demos.creative-tim.com/notus-nextjs/landing?ref=nnjs-github-readme)
   - [Profile](https://demos.creative-tim.com/notus-nextjs/profile?ref=nnjs-github-readme)
 
 
@@ -176,15 +176,15 @@ notus-nextjs
 │   ├── _document.js
 │   ├── _error.js
 │   ├── admin
-│   │   ├── dashboard.js
+│   │   ├── page.js
 │   │   ├── maps.js
 │   │   ├── settings.js
 │   │   └── tables.js
 │   ├── auth
-│   │   ├── login.js
+│   │   ├── page.js
 │   │   └── register.js
 │   ├── index.js
-│   ├── landing.js
+│   ├── page.js
 │   └── profile.js
 └── tailwind.config.js
 ```
