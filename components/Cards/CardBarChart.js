@@ -3,7 +3,7 @@
 import React from "react";
 import { Chart, registerables } from "chart.js";
 
-// Register Chart.js components
+// Page Chart.js components
 Chart.register(...registerables);
 
 export default function CardBarChart() {

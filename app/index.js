@@ -2,7 +2,7 @@
 export async function getServerSideProps() {
     return {
         redirect: {
-            destination: '/page',
+            destination: '/',
             permanent: false,
         },
     };

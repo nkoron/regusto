@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import {signInAction} from "../../actions";
 
 // layout for page
 
@@ -17,32 +18,6 @@ export default function Page() {
   };
   const handleChangePass = (event) => {
     setPassword(event.target.value); // Updates state with the input value
-  };
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const response = await fetch("/api/actions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        // Handle success
-        window.location.href = result.redirect;
-      } else {
-        // Handle error
-        setError(result.error);
-      }
-    } catch (error) {
-      setError("An unexpected error occurred.");
-      console.error(error);
-    }
   };
 
 
@@ -91,10 +66,11 @@ export default function Page() {
                       </label>
                       <input
                           type="email"
+                          name="email"
                           className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                           placeholder="Email"
-                          value={email} // Controlled by React state
                           onChange={handleChangeEmail} // Updates state on change
+                          required
                       />
                     </div>
 
@@ -107,9 +83,10 @@ export default function Page() {
                       </label>
                       <input
                           type="password"
+                          name="password"
                           className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                           placeholder="Password"
-                          value={password} // Controlled by React state
+                          required={true}
                           onChange={handleChangePass} // Updates state on change
                       />
                     </div>
@@ -129,8 +106,8 @@ export default function Page() {
                     <div className="text-center mt-6">
                       <button
                           className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                          type="button"
-                          onClick={handleSubmit}
+                          type="submit"
+                          formAction={signInAction}
                       >
                         Sign In
                       </button>

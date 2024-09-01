@@ -6,10 +6,11 @@ import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import HeaderStats from "components/Headers/HeaderStats.js";
 import FooterAdmin from "components/Footers/FooterAdmin.js";
+import AuthGuard from "../../components/AuthGuard";
 
 export default function Admin({ children }) {
     return (
-        <>
+        <AuthGuard>
             <Sidebar />
             <div className="relative md:ml-64 bg-blueGray-100">
                 <AdminNavbar />
@@ -20,6 +21,6 @@ export default function Admin({ children }) {
                     <FooterAdmin />
                 </div>
             </div>
-        </>
+        </AuthGuard>
     );
 }

@@ -43,7 +43,7 @@
 - `jsconfig.json` (to keep our absolute imports)
 ### Deleted dependencies
 - `@tailwindcss/custom-forms`
-- `react-google-maps` (replaced by simple Google Maps API)
+- `react-google-maps` (replaced by simple Google Page API)
 - `@types/googlemaps` (dependencies of `react-google-maps`)
 - `@types/markerclustererplus` (dependencies of `react-google-maps`)
 - `@types/react` (dependencies of `react-google-maps`)

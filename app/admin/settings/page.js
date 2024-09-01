@@ -7,9 +7,8 @@ import CardProfile from "components/Cards/CardProfile.js";
 
 // layout for page
 
-import Admin from "layouts/Admin.js";
 
-export default function Settings() {
+export default function Page() {
   return (
     <>
       <div className="flex flex-wrap">
@@ -24,4 +23,3 @@ export default function Settings() {
   );
 }
 
-Settings.layout = Admin;

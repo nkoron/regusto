@@ -1,10 +1,23 @@
-import React from "react";
+"use client";
+import React, {useState} from "react";
+import {signUpAction} from "../../actions";
 
 // layout for page
 
-import Auth from "layouts/Auth.js";
 
-export default function Register() {
+export default function Page() {
+  const [email, setEmail] = useState(''); // State to hold the email input value
+  const [password, setPassword] = useState(''); // State to hold the email input value
+  const [error, setError] = useState(''); // State to hold the email input value
+
+
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value); // Updates state with the input value
+  };
+  const handleChangePass = (event) => {
+    setPassword(event.target.value); // Updates state with the input value
+  };
+
   return (
     <>
       <div className="container mx-auto px-4 h-full">
@@ -40,19 +53,19 @@ export default function Register() {
                   <small>Or sign up with credentials</small>
                 </div>
                 <form>
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="email"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      placeholder="Name"
-                    />
-                  </div>
+                  {/*<div className="relative w-full mb-3">*/}
+                  {/*  <label*/}
+                  {/*    className="block uppercase text-blueGray-600 text-xs font-bold mb-2"*/}
+                  {/*    htmlFor="grid-password"*/}
+                  {/*  >*/}
+                  {/*    Name*/}
+                  {/*  </label>*/}
+                  {/*  <input*/}
+                  {/*    type="email"*/}
+                  {/*    className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"*/}
+                  {/*    placeholder="Name"*/}
+                  {/*  />*/}
+                  {/*</div>*/}
 
                   <div className="relative w-full mb-3">
                     <label
@@ -62,7 +75,10 @@ export default function Register() {
                       Email
                     </label>
                     <input
-                      type="email"
+                        onChange={handleChangeEmail}
+                        required={true}
+                        type="email"
+                        name="email"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Email"
                     />
@@ -77,8 +93,11 @@ export default function Register() {
                     </label>
                     <input
                       type="password"
+                      name="password"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Password"
+                      onChange={handleChangePass}
+                      required={true}
                     />
                   </div>
 
@@ -105,7 +124,8 @@ export default function Register() {
                   <div className="text-center mt-6">
                     <button
                       className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                      type="button"
+                      type="submit"
+                    formAction={signUpAction}
                     >
                       Create Account
                     </button>
@@ -120,4 +140,3 @@ export default function Register() {
   );
 }
 
-Register.layout = Auth;

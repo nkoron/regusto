@@ -39,12 +39,12 @@ Here are all the page from the project:
 - [Presentation](https://demos.creative-tim.com/notus-nextjs/?ref=nnjs-github-readme)
 - Admin Samples
   - [Page](https://demos.creative-tim.com/notus-nextjs/admin/dashboard?ref=nnjs-github-readme)
-  - [Settings](https://demos.creative-tim.com/notus-nextjs/admin/settings?ref=nnjs-github-readme)
-  - [Tables](https://demos.creative-tim.com/notus-nextjs/admin/tables?ref=nnjs-github-readme)
-  - [Maps](https://demos.creative-tim.com/notus-nextjs/admin/maps?ref=nnjs-github-readme)
+  - [Page](https://demos.creative-tim.com/notus-nextjs/admin/settings?ref=nnjs-github-readme)
+  - [Page](https://demos.creative-tim.com/notus-nextjs/admin/tables?ref=nnjs-github-readme)
+  - [Page](https://demos.creative-tim.com/notus-nextjs/admin/maps?ref=nnjs-github-readme)
 - Authentication Samples
   - [Page](https://demos.creative-tim.com/notus-nextjs/auth/login?ref=nnjs-github-readme)
-  - [Register](https://demos.creative-tim.com/notus-nextjs/auth/register?ref=nnjs-github-readme)
+  - [Page](https://demos.creative-tim.com/notus-nextjs/auth/register?ref=nnjs-github-readme)
 - Presentation Samples
   - [Page](https://demos.creative-tim.com/notus-nextjs/landing?ref=nnjs-github-readme)
   - [Profile](https://demos.creative-tim.com/notus-nextjs/profile?ref=nnjs-github-readme)
@@ -155,7 +155,7 @@ notus-nextjs
 │   │   └── FooterSmall.js
 │   ├── Headers
 │   │   └── HeaderStats.js
-│   ├── Maps
+│   ├── Page
 │   │   └── MapExample.js
 │   ├── Navbars
 │   │   ├── AdminNavbar.js
@@ -177,12 +177,12 @@ notus-nextjs
 │   ├── _error.js
 │   ├── admin
 │   │   ├── page.js
-│   │   ├── maps.js
-│   │   ├── settings.js
-│   │   └── tables.js
+│   │   ├── page.js
+│   │   ├── page.js
+│   │   └── page.js
 │   ├── auth
 │   │   ├── page.js
-│   │   └── register.js
+│   │   └── page.js
 │   ├── index.js
 │   ├── page.js
 │   └── profile.js
