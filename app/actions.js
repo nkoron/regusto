@@ -4,6 +4,9 @@ import { encodedRedirect } from "/utils/utils";
 import { createClient } from "/utils/supabase/server";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import {NextResponse as res} from "next/server";
+import * as req from "next/headers";
+import * as next from "next/headers";
 
 export const signUpAction = async (formData) => {
     const email = formData.get("email")?.toString();
@@ -46,7 +49,7 @@ export const signInAction = async (formData) => {
     });
 
     if (error) {
-        return encodedRedirect("error", "/login", error.message);
+        return encodedRedirect("error", "login" , error.message);
     }
 
     return redirect("/admin/dashboard");

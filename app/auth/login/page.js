@@ -7,7 +7,7 @@ import {signInAction} from "../../actions";
 
 
 
-export default function Page() {
+export default function Page( Message ) {
   const [email, setEmail] = useState(''); // State to hold the email input value
   const [password, setPassword] = useState(''); // State to hold the email input value
   const [error, setError] = useState(''); // State to hold the email input value
@@ -113,6 +113,9 @@ export default function Page() {
                       </button>
                     </div>
                   </form>
+                  <formMessage>
+                    <small>Aca imprimiria el Mensaje del error (si corresponde)</small>
+                  </formMessage>
                 </div>
               </div>
               <div className="flex flex-wrap mt-6 relative">
