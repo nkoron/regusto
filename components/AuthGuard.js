@@ -15,7 +15,7 @@ const AuthGuard = ({ children }) => {
             if (session) {
                 setAuthenticated(true);
             } else {
-                await router.push('/login');
+                await router.push('/auth/login');
             }
             setLoading(false);
         };
