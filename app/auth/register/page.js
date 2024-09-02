@@ -1,11 +1,15 @@
 "use client";
 import React, {useState} from "react";
 import {signUpAction} from "../../actions";
+import {FormMessage} from "../../../components/formMessage";
+import { useSearchParams } from 'next/navigation';
+
 
 // layout for page
 
 
 export default function Page() {
+    const searchParams = useSearchParams() // Obtener los parámetros de búsqueda de la URL
   const [email, setEmail] = useState(''); // State to hold the email input value
   const [password, setPassword] = useState(''); // State to hold the email input value
   const [error, setError] = useState(''); // State to hold the email input value
@@ -17,6 +21,12 @@ export default function Page() {
   const handleChangePass = (event) => {
     setPassword(event.target.value); // Updates state with the input value
   };
+
+  const message =  {
+      success: searchParams.get('success') || '',
+      error: searchParams.get('error') || '',
+      message: searchParams.get('message') || '',
+    };
 
   return (
     <>
@@ -129,6 +139,7 @@ export default function Page() {
                     >
                       Create Account
                     </button>
+                    <FormMessage message={message} />
                   </div>
                 </form>
               </div>

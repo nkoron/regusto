@@ -2,16 +2,24 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import {signInAction} from "../../actions";
+import {FormMessage} from "../../../components/formMessage";
+import { useSearchParams } from 'next/navigation';
+
 
 // layout for page
 
 
 
-export default function Page( Message ) {
+export default function Page( ) {
+  const searchParams = useSearchParams() // Obtener los parámetros de búsqueda de la URL
   const [email, setEmail] = useState(''); // State to hold the email input value
   const [password, setPassword] = useState(''); // State to hold the email input value
-  const [error, setError] = useState(''); // State to hold the email input value
 
+  const message = {
+    success: searchParams.get('success') || '',
+    error: searchParams.get('error') || '',
+    message: searchParams.get('message') || '',
+  };
 
   const handleChangeEmail = (event) => {
     setEmail(event.target.value); // Updates state with the input value
@@ -111,11 +119,10 @@ export default function Page( Message ) {
                       >
                         Sign In
                       </button>
+                      <FormMessage message={message}/>
                     </div>
+
                   </form>
-                  <formMessage>
-                    <small>Aca imprimiria el Mensaje del error (si corresponde)</small>
-                  </formMessage>
                 </div>
               </div>
               <div className="flex flex-wrap mt-6 relative">
